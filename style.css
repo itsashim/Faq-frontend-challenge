@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus{
+  outline: none !important;
+}
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+
+/* main */
+.main{
+  background-image: linear-gradient(hsl(273, 75%, 66%),  hsl(240, 73%, 65%));
+display: flex;
+justify-content: center;
+padding: 11rem 5rem;
+overflow: hidden;
+}
+
+.main-wrapper{
+position: relative;
+  gap: 7rem;
+background-color: white;
+  width: 80%;
+padding: 6rem 0;
+border-radius: 25px;
+z-index: 0;
+}
+
+
+
+/* image section */
+
+.main-img-desk{
+  z-index: 3;
+
+}
+
+.main-img-mob{
+display: none;
+}
+
+
+.desk-box{
+  position: absolute;
+  top: 48%;
+  transform: translate(0%,-50%);
+}
+
+
+.img-pattern{
+  position: absolute;
+  width: 60%;
+  top: 10px;
+  left: -250px;
+  z-index: -1;
+
+}
+
+/* accordion */
+.head-first{
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+}
+.accordion-item{
+  border: none !important;
+  border-bottom: 1px solid #aaa !important;
+  padding-bottom: 1rem;
+}
+
+.accordion-button:focus{
+  outline: inset 1px solid #fff ;
+}
+
+.accordion-button:not(.collapsed) {
+  color: unset;
+  background-color: unset;
+  box-shadow: unset;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: unset;
+  outline: 0;
+  box-shadow: unset;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: url(images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url(images/icon-arrow-down.svg);
+  transform: var(--bs-accordion-btn-icon-transform);
+}
+
+.bold{
+  font-weight: 700;
+}
+
+@media(max-width: 375px){
+
+.main{
+  display: block;
+  margin: 0 auto;
+  padding:10rem  0.7rem;
+  text-align: center;
+}
+.row{
+  margin: unset;
+  padding: unset;
+}
+.main-wrapper{
+  width: 100%;
+  display: block;
+padding: 0;
+margin: unset;
+}
+
+.desk-box{
+  display: none;
+}
+
+.main-img-desk{
+  display: none;
+}
+.main-img-sec{
+  display: none;
+}
+
+.main-content{
+  padding-top: 10rem;
+  position: relative;
+}
+
+.main-img-mob{
+  display: block;
+  top: -25%;
+  position: absolute;
+
+}
+
+
+}
